@@ -5,7 +5,7 @@ import json
 from time import sleep
 from operator import itemgetter
 from bartendro import app, db, mixer
-from flask import Flask, request, Response
+from flask import Flask, request, Response, redirect
 from flask.ext.login import login_required, current_user
 from sqlalchemy.sql import text
 from werkzeug.exceptions import ServiceUnavailable, BadRequest, InternalServerError
@@ -34,10 +34,13 @@ def ws_make_drink(drink_id):
     recipe = {}
     size=0
     drink = Drink.query.filter_by(id=int(drink_id)).first()
+    callback=''
     for arg in request.args:
+        if arg[0:8]=='callback':
+            callback=request.args.get(arg)
         if arg[0:4] == 'size':
             size = int(request.args.get(arg))
-        else:
+        if arg[0:5] == 'booze':
             booze = int(arg[5:])
             recipe[booze] = int(request.args.get(arg))
 
@@ -64,7 +67,9 @@ def ws_make_drink(drink_id):
         raise ServiceUnavailable(err)
 
     # todo: I'd like to return more than ok
-
+    if len(callback) > 1:
+        print('callback ', callback)
+        return redirect(callback, code=302)
     resp = Response(js, status=200, mimetype='application/json')
     return resp
     #return "%r\nok\n" % recipe

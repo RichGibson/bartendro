@@ -15,6 +15,11 @@
         <ul class="nav">
           {% if not options.i_am_shotbot %}
              <li
+             {% if active == "foobar" %}
+                class="active"
+             {% endif %}
+             ><a href="http://127.0.0.1:5000" class="slim-nav-item">The Dude Trivia</a></li>
+             <li
              {% if active == "index" %}
                 class="active"
              {% endif %}
