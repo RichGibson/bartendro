@@ -15,7 +15,7 @@ from bartendro.view.root import filter_drink_list
 
 def load_loaded_boozes():
     # this assumes we have 16 dispensers, or, this doesn't care what max dispensers is
-    loaded = db.session.query("id", "name", "abv", "type","dispenser")\
+    loaded = db.session.query(text("id"), text("name"), text("abv"), text("type"),text("dispenser"))\
                  .from_statement(text("""SELECT booze.id, 
                                            booze.name,
                                            booze.abv,

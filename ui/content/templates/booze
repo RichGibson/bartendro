@@ -3,6 +3,7 @@
 {% block body %}
 
 <!-- Looking up a single booze  ----------------------------------------- -->
+<h1>User explore booze is broken</h1>
 {% if booze %}
     <div class="row-fluid">
         <div class="span12">

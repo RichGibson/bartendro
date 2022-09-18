@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/bartendro-theme/jquery-ui-1.10.3.custom.min.css" />
   </head>
   <body>
+<!-- 
     <div class="navbar">
       <div class="navbar-inner">
         <ul class="nav">
@@ -54,6 +55,7 @@
         </div>
       </div>
     </div>
+-->
       <div class="container-fluid">
         <div id="moar">
                 <div class="orange-border">
@@ -64,4 +66,10 @@
           </div>
       </div>
   </body>
+        <div class="bartendro-logo">
+            <a href="/admin"><img class="bartendro-logo-img" src="/static/images/bartendro-logo.png"></a>
+        </div>
+        <div class="party-robot">
+            <a href="/admin"><img class="party-robot-img" src="/static/images/partyrobot.png"></a>
+        </div>
 </html>

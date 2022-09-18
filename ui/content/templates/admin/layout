@@ -23,6 +23,19 @@
                 {% if options.use_liquid_level_sensors %}
                    <li><a href="/admin/liquidlevel">liquid level</a></li>
                 {% endif %}
+
+                <li
+                {% if active == "shots" %}
+                   class="active"
+                {% endif %}
+                ><a href="/shots" class="slim-nav-item">shots</a></li>
+
+                <li
+                {% if active == "trending" %}
+                   class="active"
+                {% endif %}
+                ><a href="/trending" class="slim-nav-item">trending</a></li>
+
                 <li><a href="/admin/debug">debug</a></li>
                 <li><a href="/admin/logout">logout</a></li>
             {% endif %}

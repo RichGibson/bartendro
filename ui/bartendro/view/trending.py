@@ -100,21 +100,21 @@ def trending_drinks_detail(begindate, enddate, txt='', hours=''):
 
     #import pdb
     #pdb.set_trace()
-    total_number = db.session.query("number")\
+    total_number = db.session.query(text("number"))\
                  .from_statement(text("""SELECT count(*) as number
                                       FROM drink_log 
                                      WHERE drink_log.time >= :begin 
                                        AND drink_log.time <= :end"""))\
                  .params(begin=begindate, end=enddate).first()
 
-    total_volume = db.session.query("volume")\
+    total_volume = db.session.query(text("volume"))\
                  .from_statement(text("""SELECT sum(drink_log.size) as volume 
                                       FROM drink_log 
                                      WHERE drink_log.time >= :begin 
                                        AND drink_log.time <= :end"""))\
                  .params(begin=begindate, end=enddate).first()
 
-    top_drinks = db.session.query("id", "name", "number", "volume")\
+    top_drinks = db.session.query(text("id"), text("name"), text("number"), text("volume"))\
                  .from_statement(text("""SELECT drink.id, 
                                            drink_name.name,
                                            count(drink_log.drink_id) AS number, 
@@ -127,7 +127,7 @@ def trending_drinks_detail(begindate, enddate, txt='', hours=''):
                                   ORDER BY count(drink_log.drink_id) desc;"""))\
                  .params(begin=begindate, end=enddate).all()
 
-    drinks_by_date = db.session.query("date",  "number", "volume")\
+    drinks_by_date = db.session.query(text("date"),  text("number"), text("volume"))\
                  .from_statement(text("""SELECT date(time- :BARTENDRO_DAY_START_TIME,'unixepoch') as date, 
                                            count(drink_log.drink_id) AS number, 
                                            sum(drink_log.size) AS volume 
