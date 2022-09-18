@@ -48,8 +48,15 @@ def dispenser():
         fields.append((dis, actual))
 
     form = F(**kwargs)
+    print('looking at dispensers I guess')
+    import pdb
+    pdb.set_trace()
     for i, dispenser in enumerate(dispensers):
-        form["dispenser%d" % (i + 1)].data = "%d" % booze_list[dispenser.booze_id - 1][0]
+        print('i: %d dispenser: %r dispensers.actual: %r' %(i, dispenser, dispenser.actual))
+        try:
+            form["dispenser%d" % (i + 1)].data = "%d" % booze_list[dispenser.booze_id - 1][0]
+        except:
+            print('form fuckup')
         form["actual%d" % (i + 1)].data = dispenser.actual
 
     bstate = app.globals.get_state()

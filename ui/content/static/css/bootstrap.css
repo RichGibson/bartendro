@@ -2075,12 +2075,12 @@ legend + .control-group {
 .btn.disabled,
 .btn[disabled] {
   color: #333333;
-  background-color: #e6e6e6;
-  *background-color: #d9d9d9;
+  background-color: #CBAAAB;
+  *background-color: #CBAAAB;
 }
 .btn:active,
 .btn.active {
-  background-color: #cccccc \9;
+  background-color: #CBAAAB;
 }
 .btn:first-child {
   *margin-left: 0;
@@ -2210,18 +2210,18 @@ input[type="button"].btn-block {
 }
 .btn-warning {
   color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #fb8946;
-  background-image: -moz-linear-gradient(top, #fc9c64, #fa6c19);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc9c64), to(#fa6c19));
-  background-image: -webkit-linear-gradient(top, #fc9c64, #fa6c19);
-  background-image: -o-linear-gradient(top, #fc9c64, #fa6c19);
-  background-image: linear-gradient(to bottom, #fc9c64, #fa6c19);
+  # text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #FEBBCD;
+  #background-image: -moz-linear-gradient(top, #FEBBCD, #AAAAAA);
+  #background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FEBBCD), to(#AAAAAA));
+  #background-image: -webkit-linear-gradient(top, #FEBBCD, #AAAAAA);
+  #background-image: -o-linear-gradient(top, #FEBBCD, #AAAAAA);
+  background-image: linear-gradient(to right, #FEBBCD, #FEBBCD);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffc9c64', endColorstr='#fffa6c19', GradientType=0);
+  #filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEBBCDc64', endColorstr='#00000019', GradientType=0);
   border-color: #fa6c19 #fa6c19 #c24a04;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #fa6c19;
+  *background-color: #FEBBCD;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2233,7 +2233,7 @@ input[type="button"].btn-block {
 .btn-warning.disabled,
 .btn-warning[disabled] {
   color: #ffffff;
-  background-color: #fa6c19;
+  background-color: #FEBBCD;
   *background-color: #f45d05;
 }
 .btn-warning:active,
@@ -4436,7 +4436,7 @@ a.thumbnail:focus {
 }
 .progress-warning .bar,
 .progress .bar-warning {
-  background-color: #fb8946;
+  background-color: #febbcd;
   background-image: -moz-linear-gradient(top, #fc9c64, #fa6c19);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc9c64), to(#fa6c19));
   background-image: -webkit-linear-gradient(top, #fc9c64, #fa6c19);
