@@ -54,7 +54,8 @@ def index():
                         .filter(Drink.name_id == DrinkName.id)  \
                         .filter(Drink.popular == 1)  \
                         .filter(Drink.available == 1)  \
-                        .order_by(asc(func.lower(DrinkName.name))).all() 
+                        .order_by(asc(func.lower(DrinkName.sortname))).all() 
+                        #.order_by(asc(func.lower(DrinkName.name))).all() 
 
     top_drinks = filter_drink_list(can_make_dict, top_drinks)
     process_ingredients(top_drinks)
@@ -64,7 +65,9 @@ def index():
                         .filter(Drink.name_id == DrinkName.id)  \
                         .filter(Drink.popular == 0)  \
                         .filter(Drink.available == 1)  \
-                        .order_by(asc(func.lower(DrinkName.name))).all() 
+                        .order_by(asc(func.lower(DrinkName.sortname))).all() 
+		        #.order_by(asc(func.lower(DrinkName.name))).all() 
+
     other_drinks = filter_drink_list(can_make_dict, other_drinks)
     process_ingredients(other_drinks)
 

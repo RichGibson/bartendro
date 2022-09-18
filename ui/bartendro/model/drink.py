@@ -48,7 +48,12 @@ class Drink(db.Model):
     def process_ingredients(self):
         ing = []
 
-        self.drink_boozes = sorted(self.drink_boozes, key=attrgetter('booze.abv', 'booze.name'), reverse=True)
+        #self.drink_boozes = sorted(self.drink_boozes, key=attrgetter('booze.abv', 'booze.name'), reverse=True)
+        #self.drink_boozes = sorted(self.drink_boozes, key=attrgetter('booze.boozeorder', 'booze.name'), reverse=False)
+        self.drink_boozes = sorted(self.drink_boozes, key=attrgetter('booze.boozeorder'), reverse=False)
+        print(self.drink_boozes)
+        import pdb
+        #pdb.set_trace()
         for db in self.drink_boozes:
             ing.append({ 'name' : db.booze.name, 
                          'id' : db.booze.id, 

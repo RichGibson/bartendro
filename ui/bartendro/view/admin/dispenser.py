@@ -49,8 +49,9 @@ def dispenser():
 
     form = F(**kwargs)
     print('looking at dispensers I guess')
-    import pdb
-    pdb.set_trace()
+    #import pdb
+    #pdb.set_trace()
+    print('something here is at least sometimes broken')
     for i, dispenser in enumerate(dispensers):
         print('i: %d dispenser: %r dispensers.actual: %r' %(i, dispenser, dispenser.actual))
         try:

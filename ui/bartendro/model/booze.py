@@ -29,6 +29,7 @@ class Booze(db.Model):
     desc = Column(UnicodeText, nullable=False)
     image = Column(UnicodeText, nullable=True)
     abv = Column(Integer, default=0)
+    boozeorder = Column(Integer)
     type = Column(Integer, default=0)
 
     # add unique constraint for name

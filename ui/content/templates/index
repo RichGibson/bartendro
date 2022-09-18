@@ -5,7 +5,7 @@
     {% if top_drinks or other_drinks %}
         <div class="row-fluid">
            <div class="span6">
-                <h1>the essentials</h1>
+                <h1>whisky cocktails</h1>
            </div>
            <div class="span6">
            </div>
@@ -72,12 +72,14 @@ $(document).ready(function() {
          <a class="btn btn-large btn-block drink-btn button-border
          {% if drink.am_lucky or options.turbo_mode %} btn-success {% else %} btn-warning {% endif %}" style="margin-bottom: 8px;" 
                 type="button" href="/drink/{{ drink.id }}{% if drink.am_lucky or options.turbo_mode %}/go{% endif %}">{{ drink.name.name }}</a>
+         
          <div class="ingredients">
             {% for ing in drink.ingredients %}
-               {{ ing.name }}{% if not loop.last %}, {% endif %}
+               {{ ing.name }}{% if not loop.last %} &#8226; {% endif %}
             {% endfor %}
          </div>
-         <div>{{ drink.desc }}</div>
+
+         <!-- div>{{ drink.desc }}</div -->
       </div>
       {% if (loop.index0 % 2) == 1 %}
          </div> 
