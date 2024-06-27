@@ -2,8 +2,12 @@
 
 import os
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.login import LoginManager
+
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+
+#from flask.ext.sqlalchemy import SQLAlchemy
+#from flask.ext.login import LoginManager
 from sqlalchemy.orm import mapper, relationship, backref
 
 SQLALCHEMY_DATABASE_FILE = 'bartendro.db'
