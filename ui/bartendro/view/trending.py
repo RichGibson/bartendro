@@ -3,7 +3,7 @@ import time, datetime
 from bartendro import app, db
 from sqlalchemy import desc, text
 from flask import Flask, request, render_template
-from flask.ext.login import login_required
+from flask_login import login_required
 from bartendro.model.drink import Drink
 from bartendro.model.drink_log import DrinkLog
 from bartendro.model.booze import Booze

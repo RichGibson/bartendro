@@ -4,7 +4,7 @@ from time import sleep
 from werkzeug.exceptions import ServiceUnavailable
 from bartendro import app, db, mixer
 from flask import Flask, request
-from flask.ext.login import current_user
+from flask_login import current_user
 from bartendro.model.drink import Drink
 from bartendro.model.booze import Booze
 from bartendro.model.dispenser import Dispenser

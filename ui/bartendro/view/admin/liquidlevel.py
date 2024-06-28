@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from bartendro import app, db
 from flask import Flask, request, render_template
-from flask.ext.login import login_required
+from flask_login import login_required
 
 @app.route('/admin/liquidlevel')
 @login_required

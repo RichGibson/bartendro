@@ -6,7 +6,7 @@ from time import sleep
 from werkzeug.exceptions import BadRequest, InternalServerError
 from bartendro import app, db
 from flask import Flask, request, Response
-from flask.ext.login import login_required
+from flask_login import login_required
 
 log = logging.getLogger('bartendro')
 

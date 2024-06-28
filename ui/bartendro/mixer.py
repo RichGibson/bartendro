@@ -6,7 +6,7 @@ import traceback
 from time import sleep, time
 from threading import Thread
 from flask import Flask, current_app
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 import memcache
 from sqlalchemy.orm import mapper, relationship, backref
 from sqlalchemy.sql import text

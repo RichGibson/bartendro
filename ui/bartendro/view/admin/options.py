@@ -7,7 +7,7 @@ import os
 from bartendro import app
 from flask import Flask, request, render_template, Response
 from werkzeug.exceptions import Unauthorized
-from flask.ext.login import login_required
+from flask_login import login_required
 from bartendro.model.version import DatabaseVersion
 
 def get_ip_address():

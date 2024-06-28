@@ -2,7 +2,7 @@
 from bartendro import app, db
 from sqlalchemy import func, asc
 from flask import Flask, request, redirect, render_template
-from flask.ext.login import login_required
+from flask_login import login_required
 from bartendro.model.drink import Drink
 from bartendro.model.booze import Booze
 from bartendro.model.booze_group import BoozeGroup

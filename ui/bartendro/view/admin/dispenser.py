@@ -3,7 +3,7 @@ from sqlalchemy import func, asc
 import memcache
 from bartendro import app, db
 from flask import Flask, request, redirect, render_template
-from flask.ext.login import login_required
+from flask_login import login_required
 from wtforms import Form, SelectField, IntegerField, validators
 from bartendro.model.drink import Drink
 from bartendro.model.booze import Booze

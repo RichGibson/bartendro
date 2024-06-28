@@ -4,7 +4,7 @@ import logging
 from werkzeug.exceptions import ServiceUnavailable, InternalServerError
 from bartendro import app, db, STATIC_FOLDER
 from flask import Flask, request, Response
-from flask.ext.login import login_required
+from flask_login import login_required
 from bartendro.model.drink import Drink
 from bartendro.model.booze import Booze
 from bartendro.form.booze import BoozeForm

@@ -6,7 +6,7 @@ from time import sleep
 from operator import itemgetter
 from bartendro import app, db, mixer
 from flask import Flask, request, Response
-from flask.ext.login import login_required, current_user
+from flask_login import login_required, current_user
 from sqlalchemy.sql import text
 from werkzeug.exceptions import ServiceUnavailable, BadRequest, InternalServerError
 from bartendro.model.drink import Drink
